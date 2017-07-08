@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">kkp revisi</string>
+    <string name="ruang1">Ruang 1</string>
+    <string name="ruang2">Ruang 2</string>
+    <string name="ruang3">Ruang 3</string>
+    <string name="ruang4">Ruang 4</string>
+    <string name="ruang5">Ruang 5</string>
+    <string name="ruang6">Ruang 6</string>
+    <string name="ruang7">Ruang 7</string>
+    <string name="ruang8">Ruang 8</string>
+</resources>
