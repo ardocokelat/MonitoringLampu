@@ -27,6 +27,7 @@ public class LampActivity extends Activity implements View.OnClickListener {
 
     public final static String PREF_IP = "PREF_IP_ADDRESS";
     public final static String PREF_PORT = "PREF_PORT_NUMBER";
+    public final static String PREF_KEY = "";
 
     // declare buttons and text inputs
     private Switch ruang1, ruang2, ruang3, ruang4, ruang5, ruang6, ruang7, ruang8;
@@ -73,6 +74,14 @@ public class LampActivity extends Activity implements View.OnClickListener {
         // put an empty string "" is this is the first time.
         editTextIPAddress.setText(sharedPreferences.getString(PREF_IP, ""));
         editTextPortNumber.setText(sharedPreferences.getString(PREF_PORT, ""));
+        ruang1.setChecked(sharedPreferences.getBoolean("ruang1", false));
+        ruang2.setChecked(sharedPreferences.getBoolean("ruang2", false));
+        ruang3.setChecked(sharedPreferences.getBoolean("ruang3", false));
+        ruang4.setChecked(sharedPreferences.getBoolean("ruang4", false));
+        ruang5.setChecked(sharedPreferences.getBoolean("ruang5", false));
+        ruang6.setChecked(sharedPreferences.getBoolean("ruang6", false));
+        ruang7.setChecked(sharedPreferences.getBoolean("ruang7", false));
+        ruang8.setChecked(sharedPreferences.getBoolean("ruang8", false));
     }
 
     @Override
@@ -94,20 +103,76 @@ public class LampActivity extends Activity implements View.OnClickListener {
         // get the pin number from the button that was clicked
         if (view.getId() == ruang1.getId()) {
             parameterValue = "2";
+            if (ruang1.isChecked()) {
+                editor.putBoolean("ruang1", true);
+                editor.commit();
+            } else {
+                editor.putBoolean("ruang1", false);
+                editor.commit();
+            }
         } else if (view.getId() == ruang2.getId()) {
             parameterValue = "3";
+            if (ruang2.isChecked()) {
+                editor.putBoolean("ruang2", true);
+                editor.commit();
+            } else {
+                editor.putBoolean("ruang2", false);
+                editor.commit();
+            }
         } else if (view.getId() == ruang3.getId()) {
             parameterValue = "4";
+            if (ruang3.isChecked()) {
+                editor.putBoolean("ruang3", true);
+                editor.commit();
+            } else {
+                editor.putBoolean("ruang3", false);
+                editor.commit();
+            }
         } else if (view.getId() == ruang4.getId()) {
             parameterValue = "5";
+            if (ruang4.isChecked()) {
+                editor.putBoolean("ruang4", true);
+                editor.commit();
+            } else {
+                editor.putBoolean("ruang4", false);
+                editor.commit();
+            }
         } else if (view.getId() == ruang5.getId()) {
             parameterValue = "6";
+            if (ruang5.isChecked()) {
+                editor.putBoolean("ruang5", true);
+                editor.commit();
+            } else {
+                editor.putBoolean("ruang5", false);
+                editor.commit();
+            }
         } else if (view.getId() == ruang6.getId()) {
             parameterValue = "7";
+            if (ruang6.isChecked()) {
+                editor.putBoolean("ruang6", true);
+                editor.commit();
+            } else {
+                editor.putBoolean("ruang6", false);
+                editor.commit();
+            }
         } else if (view.getId() == ruang7.getId()) {
             parameterValue = "8";
+            if (ruang7.isChecked()) {
+                editor.putBoolean("ruang7", true);
+                editor.commit();
+            } else {
+                editor.putBoolean("ruang7", false);
+                editor.commit();
+            }
         } else if (view.getId() == ruang8.getId()) {
             parameterValue = "9";
+            if (ruang8.isChecked()) {
+                editor.putBoolean("ruang8", true);
+                editor.commit();
+            } else {
+                editor.putBoolean("ruang8", false);
+                editor.commit();
+            }
         }
         else {
             parameterValue = "10";
